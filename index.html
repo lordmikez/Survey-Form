@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Responsive Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="overlay">
+  <div class="title">
+  <h1 id="title">Responsive Survey Form</h1>
+  <p id="description"> A responsive survey form written in HTML and CSS. Please fill it out and provide feedback (doesn't have a backend).</p>
+  </div>
+  <div class="formcontainer">
+  <form id="survey-form">
+    <fieldset>
+      <section>
+      <label for="name" id="name-label">Name*</label>
+      <input class="fullfield" id="name" placeholder="Your name" type="text" required />
+      <label for="email" id="email-label">Email*</label>
+      <input class="fullfield" id="email" placeholder="Email address" type="email" required />
+      <label for="number" id="number-label">Number*</label>
+      <input class="halffield" id="number" placeholder="Please write your age" type="number" min="16" max="120" required />
+      <label for="dropdown" id="gender-label">Please select your gender</label>
+      <select class="halffield" id="dropdown" name="dropdown">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      </section>
+      <section>
+      <label id="employment">Are you currently employed?
+        <label class="optionfirst" for="status_employed"><input id="status_employed" type="radio" name="employment_type" value="employed" />Employed</label>
+        <label for="status_self-employed"><input id="status_self-employed" type="radio" name="employment_type" value="self-employed" />Self-employed</label>
+        <label for="status_not_employed"><input id="status_not_employed" type="radio" name="employment_type" value="not-employed" />Not Employed</label>
+      </label>
+      </section>
+      <section>
+      <label id="pet_label">What pet/ pets do you have?
+        <label class="optionfirst" for="pet_dog">
+          <input id="pet_dog" type="checkbox" required name="pet_selector" value="dog" />Dog</label>
+        <label for="pet_cat">
+          <input id="pet_cat" type="checkbox" required name="pet_selector" value="cat" />Cat</label>
+        <label for="pet_fish">
+          <input id="pet_fish" type="checkbox" required name="pet_selector" value="fish" />Fish</label>
+        <label for="pet_bird">
+          <input id="pet_bird" type="checkbox" required name="pet_selector" value="bird" />Bird</label><label for="pet_other">
+          <input id="pet_other" type="checkbox" required name="pet_selector" value="other" />Other</label><label for="pet_select">
+          <input id="pet_none" type="checkbox" required name="pet_none" value="none" />None</label>
+      </label>
+      </section>
+      <label for="feedback">Please give feedback on my form
+        <textarea  class="fullfield" id="feedback" name="feedback" rows="3" cols="30" placeholder="I like this form because.."></textarea>
+      </label>
+    </fieldset>
+    <input class="submit" id="submit" type="submit" value="Submit" />
+  </form>
+</div>
+</div>
+</body>
+
+</html>
